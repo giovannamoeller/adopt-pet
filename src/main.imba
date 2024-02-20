@@ -23,6 +23,7 @@ global css
 	main
 		mx: 1260px
 		m: 0 auto
+		mt: 5em
 		d: flex
 		fld: column
 		ai: center
@@ -47,11 +48,10 @@ global css
 	a
 		td: none
 	form
-		w: 100%
+		w: 80%
 		d: flex
 		fld: column
 		g: 0.75em
-		w: 100%
 
 tag app
 	<self>

@@ -12,22 +12,7 @@ const app = initializeApp appSettings
 const database = getDatabase app
 const messageDB = ref database, 'messages'
 
-let data = {
-	name: ''
-	petName: ''
-	telephone: ''
-	message: ''
-}
-
 export tag PetDetails
-
-	css 
-		main
-			mt: 8em
-
-		form
-			w: 80%
-
 
 	prop name = ''
 	prop tel = ''
@@ -43,6 +28,7 @@ export tag PetDetails
 			message
 		}
 		push(messageDB, data)
+			.then do window.alert('Message sent!')
 
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">

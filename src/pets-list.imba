@@ -2,9 +2,7 @@ import { getAllPets } from './data/pets'
 
 export tag PetsList
 	
-	css 
-		main
-			mt: 8em
+	css
 		.pets-container
 			d: grid
 			gtc: repeat(3, minmax(100px, 1fr))
