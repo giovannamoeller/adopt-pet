@@ -1,3 +1,5 @@
+import { getAllPets } from './data/pets'
+
 export tag PetsList
 	
 	css 
@@ -12,21 +14,16 @@ export tag PetsList
 			m: 0 auto
 			p: 4em
 
+
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">
 		<img.shape-02 src="./assets/shape-02.svg" alt="Another green shape to make the page looks better">
 		<main>
 			<header>
-			<img src="./assets/blue-logo.svg" alt="Adopet logo">
-			<p> "Hello! See all available pets for adoption!"
+				<img src="./assets/blue-logo.svg" alt="Adopet logo">
+				<p> "Hello! See all available pets for adoption!"
 
-		let pets = []
-
-		try 
-			let res = await window.fetch "https://my-json-server.typicode.com/giovannamoeller/pets-api/pets"
-			pets = await res.json!
-		catch error
-			console.error "error: {error}"
+		const pets = await getAllPets!
 
 		<section.pets-container>
 			for pet in pets
@@ -42,6 +39,7 @@ tag PetItem
 		g: 1em
 		rd: 0.5em
 		bg: #F6F6F6
+		cursor: pointer
 		img
 			w: 148px
 			h: 148px
@@ -56,7 +54,7 @@ tag PetItem
 		h2
 			m: 0
 
-	<self>
+	<self route-to="/pets/{pet.id}">
 		<img src=pet.imageUrl alt=pet.name>
 		<div.informations>
 			<h2> pet.name

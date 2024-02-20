@@ -1,9 +1,8 @@
 import { SignUp } from './sign-up'
 import { SignIn } from './sign-in'
 import { PetsList } from './pets-list'
+import { PetDetails } from './pet-details'
 import { Welcome } from './welcome'
-
-import { loadPets } from './data/pets'
 
 global css 
 	body 
@@ -54,13 +53,12 @@ global css
 		g: 0.75em
 		w: 100%
 
-const data = await loadPets()
-
 tag app
 	<self>
 		<Welcome route='/'>
-		<SignUp route='/sign-up'>
-		<SignIn route='/sign-in'>
-		<PetsList route='/pets' data=data>
+		<SignUp route='/sign-up/'>
+		<SignIn route='/sign-in/'>
+		<PetsList route='/pets/'>
+		<PetDetails route='/pets/:id'>
 		
 imba.mount <app>

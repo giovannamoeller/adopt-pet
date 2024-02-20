@@ -3,23 +3,32 @@ export tag InputField
 	prop field
 	prop inputType
 	prop placeholder
+	prop value = ""
+	prop readOnly = no
+	prop isTextArea = false
 
 	css
 		w: 100%
 		d: flex
 		fld: column
 		g: 0.75em
-		input
+		.input-field
 			h: 4em
 			ff: inherit
+			fs: 1rem
 			p: 0 1em
 			bd: none
 			bg: #F6F6F6
 			bxs: 2px 2px 0 rgba(0, 0, 0, 0.15)
 			rd: 0.5em
 			ta: center
+		.text-area 
+			h: 8em
 
 	<self>
 		<label htmlFor=name [c: #3772FF fw: 600]>
 			field
-		<input.input-field type=inputType placeholder=placeholder name=name/>
+		if isTextArea
+			<textarea.input-field.text-area placeholder=placeholder name=name>
+		else
+			<input.input-field type=inputType placeholder=placeholder name=name value=value readOnly=readOnly/>
