@@ -1,7 +1,6 @@
 import { InputField } from './components/InputField'
 
-export tag SignUp
-
+export tag SignIn
 	css
 		body
 			bg: #FFF
