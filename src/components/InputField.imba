@@ -6,6 +6,7 @@ export tag InputField
 	prop value = ""
 	prop readOnly = no
 	prop isTextArea = false
+	prop data
 
 	css
 		w: 100%
@@ -29,6 +30,6 @@ export tag InputField
 		<label htmlFor=name [c: #3772FF fw: 600]>
 			field
 		if isTextArea
-			<textarea.input-field.text-area placeholder=placeholder name=name>
+			<textarea.input-field.text-area placeholder=placeholder name=name bind=data>
 		else
-			<input.input-field type=inputType placeholder=placeholder name=name value=value readOnly=readOnly/>
+			<input.input-field type=inputType placeholder=placeholder name=name value=value readOnly=readOnly bind=data/>

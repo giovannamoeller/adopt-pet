@@ -1,6 +1,24 @@
 import { InputField } from './components/InputField'
 import { getPetById } from './data/pets'
 
+import { initializeApp } from "firebase/app"
+import { getDatabase, ref, push, onValue, remove, get, update } from "firebase/database"
+
+const appSettings = {
+	databaseURL: "https://playground-8c3dc-default-rtdb.firebaseio.com/"
+}
+
+const app = initializeApp appSettings
+const database = getDatabase app
+const messageDB = ref database, 'messages'
+
+let data = {
+	name: ''
+	petName: ''
+	telephone: ''
+	message: ''
+}
+
 export tag PetDetails
 
 	css 
@@ -10,9 +28,21 @@ export tag PetDetails
 		form
 			w: 80%
 
+
+	prop name = ''
+	prop tel = ''
+	prop petName = ''
+	prop message = ''
+
 	def sendMessage event
 		event.preventDefault!
-		console.log "sending msg"
+		const data = {
+			name
+			tel
+			petName
+			message
+		}
+		push(messageDB, data)
 
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">
@@ -23,12 +53,13 @@ export tag PetDetails
 				<p> "Send a message to the person or institution taking care of the animal:"
 			
 			let findPet = await getPetById route.params.id
+			petName = findPet.name
 
 			<form>
-				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name">
-				<InputField name="tel" field="Telephone" inputType="tel" placeholder="Type your phone number">
-				<InputField name="animal-name" field="Animal name" inputType="text" value=findPet.name readOnly=true>
-				<InputField name="message" field="Message" placeholder="Type your message" isTextArea=yes>
+				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind=name>
+				<InputField name="tel" field="Telephone" inputType="tel" placeholder="Type your phone number" bind=tel>
+				<InputField name="animal-name" field="Animal name" inputType="text" value=findPet.name readOnly=true bind=petName>
+				<InputField name="message" field="Message" placeholder="Type your message" isTextArea=yes bind=message>
 				<button.sign-in.btn [mt: 2em] @click=sendMessage> "Send a message"
 
 			
