@@ -9,4 +9,11 @@ tag app
 			<img[s:20px] src="https://imba.io/logo.svg">
 			"count is {count}"
 
-imba.mount <app>
+imba.mount <div>
+							<details.imba-details>
+								<summary> "Imba"
+								<p> "A cool programming language"
+								<a href="https://imba.io"> "Learn More"
+
+# https://my-json-server.typicode.com/giovannamoeller/pets-api/pets
+
