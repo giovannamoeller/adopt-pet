@@ -1,19 +1,57 @@
-global css body c:warm2 bg:warm8 ff:Arial inset:0 d:vcc
+import { SignUp } from './sign-up'
+import { Welcome } from './welcome'
+
+global css 
+	body 
+		c: white
+		bg: #3772FF  
+		ff: Poppins, sans-serif 
+		inset: 0 
+		d: vcc
+		m: 0
+		p: 0
+		mah: 100vh
+	.shape-01
+		pos: absolute
+		t: 0
+		l: 0
+	.shape-02
+		pos: absolute
+		t: 20%
+		r: 0
+	.shape-03
+		pos: absolute
+		b: 0
+		l: 10%
+		zi: -1
+	main
+		mx: 1260px
+		m: 0 auto
+		d: flex
+		fld: column
+		ai: center
+		jc: center
+		ta: center
+		p
+			maw: 400px
+	.btn
+		d: block
+		m: 0 auto
+		w: 80%
+		p: 1em 2em
+		ff: inherit
+		bg: #FC7071
+		c: inherit
+		rd: 1em
+		bd: none
+		mb: 1em
+		fs: 0.75rem
+		fw: 600
+		cursor: pointer
 
 tag app
-	count = 0
 	<self>
-		<%counter @click=count++>
-			css e:250ms us:none py:3 px:5 rd:4 bg:gray9 d:hcc g:1
-				bd:1px solid transparent @hover:indigo5
-			<img[s:20px] src="https://imba.io/logo.svg">
-			"count is {count}"
-
-imba.mount <div>
-							<details.imba-details>
-								<summary> "Imba"
-								<p> "A cool programming language"
-								<a href="https://imba.io"> "Learn More"
-
-# https://my-json-server.typicode.com/giovannamoeller/pets-api/pets
-
+		<Welcome route='/'>
+		<SignUp route='/sign-up'>
+		
+imba.mount <app>
