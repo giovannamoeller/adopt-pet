@@ -1,7 +1,7 @@
 export def getAllPets
 	let pets = []
 	try
-		let res = await window.fetch "https://my-json-server.typicode.com/giovannamoeller/pets-api/pets"
+		let res = await window.fetch process.env.PETS_API_URL
 		pets = await res.json!
 	catch error
 		console.error "error: {error}"
