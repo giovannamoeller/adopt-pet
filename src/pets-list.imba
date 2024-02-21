@@ -38,6 +38,9 @@ tag PetItem
 		rd: 0.5em
 		bg: #F6F6F6
 		cursor: pointer
+		@hover
+			transform: scale(1.075)
+			tween: ease-in-out 0.2s
 		img
 			w: 148px
 			h: 148px

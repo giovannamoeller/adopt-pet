@@ -13,7 +13,6 @@ const database = getDatabase app
 const messageDB = ref database, 'messages'
 
 export tag PetDetails
-
 	prop name = ''
 	prop tel = ''
 	prop petName = ''
