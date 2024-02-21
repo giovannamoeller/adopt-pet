@@ -1,5 +1,7 @@
 # Adopet
 
+##### Access the live application here: [deployment link](https://adopet-giovannamoeller.vercel.app)
+
 #### 🚧 In construction!
 
 <img width="400" alt="Screenshot 2024-02-20 at 04 22 34" src="https://github.com/giovannamoeller/adopt-pet/assets/47362960/19833afc-9280-43d6-b81f-2149289435a6">
