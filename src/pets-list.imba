@@ -56,7 +56,7 @@ tag PetItem
 		h2
 			m: 0
 
-	<self route-to="/pets/{pet.id}">
+	<self route-to="/pets/{pet.id}/">
 		<img src=pet.imageUrl alt=pet.name>
 		<div.informations>
 			<h2> pet.name
