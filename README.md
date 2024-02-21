@@ -11,7 +11,7 @@
 
 Adopet is a web application that leverages the Imba framework and Firebase for a modern and efficient development experience. It provides users with a platform to see all the pets available for adoption and sending a message to their responsible. 
 
-#### Built with [Imba](https://imba.io)
+#### Built with [Imba](https://imba.io).
 
 ## Installation
 
