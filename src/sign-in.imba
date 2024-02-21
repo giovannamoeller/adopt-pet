@@ -17,9 +17,6 @@ export tag SignIn
 			email
 			password
 		}
-			
-		if firebaseLogin(userData) 
-			window.location.href = '/pets'
 
 	<self>
 		
@@ -33,5 +30,5 @@ export tag SignIn
 			<form @submit.prevent=login aria-label="Sign in form">
 				<InputField name="email" field="Email" inputType="email" placeholder="Type your email" bind:data=email>
 				<InputField name="password" field="Password" inputType="password" placeholder="Type your password" bind:data=password>
-				<button.sign-in.btn [mt: 2em] type="submit"> "Login"
+				<button.sign-in.btn [mt: 2em] route-to="/pets"> "Login"
 			<a route-to="/sign-up"> "Don't have an account? Sign up here!"
