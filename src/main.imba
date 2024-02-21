@@ -15,27 +15,31 @@ global css
 		t: 0
 		l: 0
 		zi: -2
+	.shape-01@!600 w: 70% 
 	.shape-02
 		pos: absolute
 		t: 20%
 		r: 0
 		zi: -1
+	.shape-02@!600 w: 20% 
+	.shape-03@!600 w: 70% 
 	main
 		mx: 1260px
 		m: 0 auto
-		mt: 5em
 		d: flex
 		fld: column
 		ai: center
 		jc: center
 		ta: center
+		p: 1em
+		pt: 5em
 		p
 			maw: 400px
 	.btn
 		c: #FFFFFF
 		d: block
 		m: 0 auto
-		w: 60%
+		w: 100%
 		p: 1em
 		ff: inherit
 		bg: #FC7071

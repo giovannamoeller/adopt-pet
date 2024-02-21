@@ -7,7 +7,6 @@ export tag SignIn
 		t: 0
 		r: 0
 		zi: 1
-
 	prop email = ''
 	prop password = ''
 
@@ -21,6 +20,7 @@ export tag SignIn
 			window.location.href = '/pets'
 
 	<self>
+		
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">
 		<img.shape-02 src="./assets/shape-02.svg" alt="Another green shape to make the page looks better">
 		<img.shape-03 src="./assets/paws.svg" alt="Another green shape to make the page looks better">
