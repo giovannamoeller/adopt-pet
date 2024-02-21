@@ -1,4 +1,5 @@
 import { getAllPets } from './services/pets'
+import { isUserLoggedIn } from './services/auth'
 
 export tag PetsList
 	
@@ -12,6 +13,9 @@ export tag PetsList
 			m: 0 auto
 			p: 4em
 
+	def mount
+		isUserLoggedIn()
+		
 
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">

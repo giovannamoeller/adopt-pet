@@ -1,13 +1,16 @@
 import { InputField } from './components/input-field'
 import { getPetById } from './services/pets'
-import { persistData, loadData, clearData } from './services/local-storage'
 import { sendMessage } from './services/firebase-database'
+import { isUserLoggedIn } from './services/auth'
 
 export tag PetDetails
 	prop name = ''
 	prop tel = ''
 	prop petName = ''
 	prop message = ''
+
+	def mount
+		isUserLoggedIn()
 
 	def submitMessage event
 		const data = {

@@ -1,17 +1,27 @@
-const localStorageKey = 'favorite-pets'
+const favoritesPetsKey = 'adopet-favorite-pets'
+const userKey = 'adopet-user'
 
-export def persistData data
-	localStorage.setItem localStorageKey, JSON.stringify(data)
+export def saveUser data
+	persistData(userKey, data)
 
-export def loadData
-	const dataString = localStorage.getItem localStorageKey
+export def favoritesPet data
+	persistData(favoritesPetsKey, data)
+
+export def getUser
+	loadData(userKey)
+
+export def getFavoritesPets
+	loadData(favoritesPetsKey)
+
+def persistData key, data
+	localStorage.setItem key, JSON.stringify(data)
+
+def loadData key
+	const dataString = localStorage.getItem key
 	if dataString
 		try
 			JSON.parse(dataString)
 		catch
-			return []
+			return null
 	else
-		return []
-		
-export def clearData
-	localStorage.removeItem(localStorageKey)
+		return null
