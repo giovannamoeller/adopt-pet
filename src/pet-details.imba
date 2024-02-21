@@ -1,14 +1,12 @@
 import { InputField } from './components/input-field'
 import { getPetById } from './services/pets'
 import { sendMessage } from './services/firebase-database'
-import { isUserLoggedIn } from './services/auth'
 
 export tag PetDetails
 	prop name = ''
 	prop tel = ''
 	prop petName = ''
 	prop message = ''
-
 
 	def submitMessage event
 		const data = {

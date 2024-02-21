@@ -1,5 +1,4 @@
 import { getAllPets } from './services/pets'
-import { isUserLoggedIn } from './services/auth'
 
 export tag PetsList
 	
