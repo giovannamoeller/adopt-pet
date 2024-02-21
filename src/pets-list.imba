@@ -6,12 +6,14 @@ export tag PetsList
 	css
 		.pets-container
 			d: grid
-			gtc: repeat(3, minmax(100px, 1fr))
+			gtc: repeat(auto-fit, minmax(350px, 1fr))
 			ac: center
 			jc: center
 			g: 2em
 			m: 0 auto
-			p: 4em
+			px: 4em @!700:1em
+			pb: 4em
+
 
 	def mount
 		isUserLoggedIn()

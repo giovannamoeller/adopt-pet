@@ -6,7 +6,9 @@ export tag SignIn
 		pos: absolute
 		t: 0
 		r: 0
-		zi: 1
+		w: 20%
+		miw: 200px
+		d: block @!500: none
 	prop email = ''
 	prop password = ''
 
