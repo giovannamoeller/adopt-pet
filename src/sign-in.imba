@@ -1,6 +1,5 @@
 import { InputField } from './components/input-field'
 import { firebaseLogin } from './services/auth'
-import { saveUser } from './services/local-storage'
 
 export tag SignIn
 	css	.shape-03
@@ -18,9 +17,8 @@ export tag SignIn
 			password
 		}
 			
-		firebaseLogin(userData)
-		saveUser(userData)
-		window.location.href = '/pets'
+		if firebaseLogin(userData) 
+			window.location.href = '/pets'
 
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">

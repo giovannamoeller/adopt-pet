@@ -1,7 +1,8 @@
-import { getUser } from './local-storage'
+import { saveUser, getUser } from './local-storage'
 
 export def firebaseLogin userData
-	console.log userData
+	saveUser(userData) if userData.email == 'giovanna@gmail.com'
+	return userData.email == 'giovanna@gmail.com'
 
 export def isUserLoggedIn
 	if !getUser()
