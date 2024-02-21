@@ -6,7 +6,7 @@
 
 <img width="400" alt="Screenshot 2024-02-20 at 04 22 34" src="https://github.com/giovannamoeller/adopt-pet/assets/47362960/19833afc-9280-43d6-b81f-2149289435a6">
 
-<img width="400" alt="Screenshot 2024-02-20 at 04 21 54" src="https://github.com/giovannamoeller/adopt-pet/assets/47362960/70c15393-f748-4a17-9aa9-e801de341fe5">
+<img width="400" alt="Screenshot 2024-02-21 at 04 25 16" src="https://github.com/giovannamoeller/adopt-pet/assets/47362960/e6a2174e-a88c-44ca-b829-10ce3872ec77">
 
 
 Adopet is a web application that leverages the Imba framework and Firebase for a modern and efficient development experience. It provides users with a platform to see all the pets available for adoption and sending a message to their responsible. 
