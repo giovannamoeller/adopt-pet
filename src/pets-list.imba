@@ -1,4 +1,4 @@
-import { getAllPets } from './data/pets'
+import { getAllPets } from './services/pets'
 
 export tag PetsList
 	

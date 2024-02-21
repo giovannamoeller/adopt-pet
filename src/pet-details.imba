@@ -1,16 +1,7 @@
 import { InputField } from './components/InputField'
-import { getPetById } from './data/pets'
-
-import { initializeApp } from "firebase/app"
-import { getDatabase, ref, push, onValue, remove, get, update } from "firebase/database"
-
-const appSettings = {
-	databaseURL: "https://playground-8c3dc-default-rtdb.firebaseio.com/"
-}
-
-const app = initializeApp appSettings
-const database = getDatabase app
-const messageDB = ref database, 'messages'
+import { getPetById } from './services/pets'
+import { persistData, loadData, clearData } from './services/local-storage'
+import { sendMessage } from './services/firebase-database'
 
 export tag PetDetails
 	prop name = ''
@@ -18,16 +9,14 @@ export tag PetDetails
 	prop petName = ''
 	prop message = ''
 
-	def sendMessage event
-		event.preventDefault!
+	def submitMessage event
 		const data = {
 			name
 			tel
 			petName
 			message
 		}
-		push(messageDB, data)
-			.then do window.alert('Message sent!')
+		sendMessage(data)
 
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">
@@ -37,14 +26,14 @@ export tag PetDetails
 				<img src="./assets/blue-logo.svg" alt="Adopet logo">
 				<p> "Send a message to the person or institution taking care of the animal:"
 			
-			let findPet = await getPetById route.params.id
+			const findPet = await getPetById route.params.id
 			petName = findPet.name
 
-			<form>
-				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind=name>
-				<InputField name="tel" field="Telephone" inputType="tel" placeholder="Type your phone number" bind=tel>
-				<InputField name="animal-name" field="Animal name" inputType="text" value=findPet.name readOnly=true bind=petName>
-				<InputField name="message" field="Message" placeholder="Type your message" isTextArea=yes bind=message>
-				<button.sign-in.btn [mt: 2em] @click=sendMessage> "Send a message"
+			<form @submit.prevent=submitMessage>
+				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind:data=name>
+				<InputField name="tel" field="Telephone" inputType="tel" placeholder="Type your phone number" bind:data=tel>
+				<InputField name="animal-name" field="Animal name" inputType="text" value=findPet.name readOnly=true bind:data=petName>
+				<InputField name="message" field="Message" placeholder="Type your message" isTextArea=yes bind:data=message>
+				<button.sign-in.btn [mt: 2em] type="submit"> "Send a message"
 
 			
