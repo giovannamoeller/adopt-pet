@@ -25,6 +25,7 @@ export tag InputField
 			ta: center
 		.text-area 
 			h: 8em
+			pt: 1em
 
 	<self>
 		<label htmlFor=name [c: #3772FF fw: 600]>

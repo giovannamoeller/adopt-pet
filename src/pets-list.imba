@@ -16,7 +16,6 @@ export tag PetsList
 	def mount
 		isUserLoggedIn()
 		
-
 	<self>
 		<img.shape-01 src='./assets/shape-01.svg' alt="Green shape to make the page looks better">
 		<img.shape-02 src="./assets/shape-02.svg" alt="Another green shape to make the page looks better">
