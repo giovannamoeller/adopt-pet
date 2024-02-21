@@ -1,6 +1,6 @@
 # Adopet
 
-##### Access the live application here: [deployment link](https://adopet-giovannamoeller.vercel.app)
+##### Access the live application here: [deployment link](https://adopet-giovannamoeller.vercel.app).
 
 #### 🚧 In construction!
 
