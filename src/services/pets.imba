@@ -4,7 +4,7 @@ export def getAllPets
 		let res = await window.fetch "https://my-json-server.typicode.com/giovannamoeller/pets-api/pets"
 		pets = await res.json!
 	catch error
-		console.log "error: {error}"
+		console.error "error: {error}"
 
 	return pets
 
