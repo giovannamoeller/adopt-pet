@@ -12,7 +12,6 @@ export tag SignUp
 	prop password = ''
 
 	def signUp event
-		event.preventDefault!
 		console.log name, email, password
 
 	<self>
@@ -23,8 +22,8 @@ export tag SignUp
 			<header>
 				<img src="./assets/blue-logo.svg" alt="Adopet logo">
 				<p> "Don't have a registration yet? So, before you look for your best friend, we need some information:"
-			<form>
-				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind=name>
-				<InputField name="email" field="Email" inputType="email" placeholder="Type your email" bind=email>
-				<InputField name="password" field="Password" inputType="password" placeholder="Type your password" bind=password>
-				<button.sign-up.btn [mt: 2em] route-to='/pets'> "Sign me up!"
+			<form @submit.prevent=signUp aria-label="Sign up form">
+				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind:data=name>
+				<InputField name="email" field="Email" inputType="email" placeholder="Type your email" bind:data=email>
+				<InputField name="password" field="Password" inputType="password" placeholder="Type your password" bind:data=password>
+				<button.sign-up.btn [mt: 2em]> "Sign me up!"

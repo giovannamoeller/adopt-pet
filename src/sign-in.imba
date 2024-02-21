@@ -28,7 +28,7 @@ export tag SignIn
 			<header>
 				<img src="./assets/blue-logo.svg" alt="Adopet logo">
 				<p [c=#3772FF mb: 2em]> "Already have an account? Log in:"
-			<form @submit.prevent=login>
+			<form @submit.prevent=login aria-label="Sign in form">
 				<InputField name="email" field="Email" inputType="email" placeholder="Type your email" bind:data=email>
 				<InputField name="password" field="Password" inputType="password" placeholder="Type your password" bind:data=password>
 				<button.sign-in.btn [mt: 2em] type="submit"> "Login"

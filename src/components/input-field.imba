@@ -25,12 +25,12 @@ export tag InputField
 			ta: center
 		.text-area 
 			h: 8em
-			pt: 1em
+			pt: 1em	
 
 	<self>
 		<label htmlFor=name [c: #3772FF fw: 600]>
 			field
 		if isTextArea
-			<textarea.input-field.text-area placeholder=placeholder name=name bind=data>
+			<textarea.input-field.text-area placeholder=placeholder name=name id=name aria-multiline="true" bind=data>
 		else
-			<input.input-field type=inputType placeholder=placeholder name=name value=value readOnly=readOnly bind=data/>
+			<input.input-field type=inputType placeholder=placeholder name=name id=name value=value readOnly=readOnly bind=data aria-readonly=readOnly/>

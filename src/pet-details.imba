@@ -32,7 +32,7 @@ export tag PetDetails
 			const findPet = await getPetById route.params.id
 			petName = findPet.name
 
-			<form @submit.prevent=submitMessage>
+			<form @submit.prevent=submitMessage aria-label="Contact form to send a message about adopting a pet">
 				<InputField name="name" field="Name" inputType="text" placeholder="Type your full name" bind:data=name>
 				<InputField name="tel" field="Telephone" inputType="tel" placeholder="Type your phone number" bind:data=tel>
 				<InputField name="animal-name" field="Animal name" inputType="text" value=findPet.name readOnly=true bind:data=petName>
