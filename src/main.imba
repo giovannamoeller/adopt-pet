@@ -70,7 +70,7 @@ tag app
 		<Welcome route='/'>
 		<SignUp route='/sign-up'>
 		<SignIn route='/sign-in'>
-		<PetsList route='/pets'>
+		<PetsList route='/pets/'>
 		<PetDetails route='/pets/:id'>
 		
 imba.mount <app>
