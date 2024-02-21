@@ -54,10 +54,16 @@ global css
 		c: #3772FF
 		mt: 1em
 	form
-		w: 80%
+		bg: gray0
+		p: 1em
+		w: 30%
+		miw: 300px
 		d: flex
 		fld: column
 		g: 0.75em
+		rd: 0.5em
+	textarea
+		resize: none
 
 tag app
 	<self>
