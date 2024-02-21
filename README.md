@@ -20,6 +20,6 @@ Adopet is a web application that leverages the Imba framework and Firebase for a
 3. Start development server: `npm run dev`
 
 ## Usage:
-Access the application in your browser at http://localhost:3000 (or your specified development URL)
+Access the application in your browser at http://localhost:3000 or at [deployment link (Vercel)](https://adopet-giovannamoeller.vercel.app).
 
 Made with <3 by Giovanna Moeller.
