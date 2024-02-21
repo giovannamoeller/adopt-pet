@@ -68,9 +68,9 @@ global css
 tag app
 	<self>
 		<Welcome route='/'>
-		<SignUp route='/sign-up/'>
-		<SignIn route='/sign-in/'>
-		<PetsList route='/pets/'>
+		<SignUp route='/sign-up'>
+		<SignIn route='/sign-in'>
+		<PetsList route='/pets'>
 		<PetDetails route='/pets/:id'>
 		
 imba.mount <app>

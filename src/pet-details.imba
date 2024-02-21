@@ -9,8 +9,6 @@ export tag PetDetails
 	prop petName = ''
 	prop message = ''
 
-	def mount
-		isUserLoggedIn()
 
 	def submitMessage event
 		const data = {
