@@ -32,3 +32,4 @@ export tag SignIn
 				<InputField name="email" field="Email" inputType="email" placeholder="Type your email" bind:data=email>
 				<InputField name="password" field="Password" inputType="password" placeholder="Type your password" bind:data=password>
 				<button.sign-in.btn [mt: 2em] type="submit"> "Login"
+			<a route-to="/sign-up"> "Don't have an account? Sign up here!"

@@ -47,6 +47,8 @@ global css
 		cursor: pointer
 	a
 		td: none
+		c: #3772FF
+		mt: 1em
 	form
 		w: 80%
 		d: flex

@@ -14,5 +14,5 @@ export tag Welcome
 				<img src="./assets/blue-logo.svg" alt="Adopet logo">
 				<h1> "Welcome!"
 				<p> "Adopting can change a life. How about looking for your new best friend today? Come with us!"
-				<a.btn route-to='/sign-in'> "I already have an account"
-				<a.btn route-to='/sign-up'> "I want to sign up"
+				<button.btn route-to='/sign-in'> "I already have an account"
+				<button.btn route-to='/sign-up'> "I want to sign up"
