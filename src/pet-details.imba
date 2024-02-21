@@ -1,4 +1,4 @@
-import { InputField } from './components/InputField'
+import { InputField } from './components/input-field'
 import { getPetById } from './services/pets'
 import { persistData, loadData, clearData } from './services/local-storage'
 import { sendMessage } from './services/firebase-database'

@@ -1,4 +1,4 @@
-import { InputField } from './components/InputField'
+import { InputField } from './components/input-field'
 
 export tag SignIn
 	css	.shape-03
